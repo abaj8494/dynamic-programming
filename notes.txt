@@ -1,0 +1,3 @@
+canSum -> Decision Problem
+howSum -> Combinatoric Problem
+bestSum -> Optimisation Problem
