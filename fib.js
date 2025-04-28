@@ -1,8 +1,17 @@
+
+/*
+Time Complexity: O(2^n)
+Space Complexity: O(n)
+*/
 function expFib(n) {
     if (n <= 2) return 1;
     return expFib(n-1) + expFib(n-2);
 }
 
+/*
+Time Complexity: O(n)
+Space Complexity: O(n)
+*/
 function dynamicFib(n, memo = {}) {
     if (n in memo) return memo[n];
     if (n <= 2) return 1;
