@@ -3,13 +3,17 @@
 Time Complexity: O(2^(n+m))
 Space Complexity: O(n+m)
 */
-
 function expGridTraveler(m, n) {
     if (m === 0 || n === 0) return 0;
     if (m === 1 || n === 1) return 1;
     return expGridTraveler(m-1, n) + expGridTraveler(m, n-1);
 }
 
+/*
+Time Complexity: O(n*m) 
+    (we cache each exploration, and there are n*m explorations (/2 really))
+Space Complexity: O(n+m)
+*/
 function memoGridTraveler(m,n, memo={}) {
     const key = m + ',' + n;
     const revKey = n + ',' + m; // doesn't appear to affect the empirical runtime much
