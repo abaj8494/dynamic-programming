@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(m*n) you're just building a 2d array cumulatively
+Space Complexity O(m*n)
+*/
 const gridTraveler = (m, n) => {
     const table = Array(m+1).fill().map(() => Array(n+1).fill(0));
     table[1][1] = 1;
